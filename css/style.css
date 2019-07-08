@@ -10498,11 +10498,11 @@ header.sticky .header-dark .mobile-toggle span {
 header.sticky nav.header-dark-transparent .mobile-toggle:hover span,
 header.sticky .header-dark .mobile-toggle:hover span {
   background: red;
+  
 }
 
 .nav-bg:hover {
-  /* background: grey;
-  color: white; */
+  
 }
 
 .sol {

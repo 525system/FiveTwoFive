@@ -17389,6 +17389,13 @@ aside .latest-post li figure {
   left: -10px;
   top: 30px;
 }
+.linkToCon{
+  color: white;
+
+}
+.linkToCon: hover{
+  color: #ff0000;
+}
 
 /* home - creative small business */
 

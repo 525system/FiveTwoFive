@@ -10524,7 +10524,7 @@ header.sticky nav.navbar-scroll-fixed-top.header-light {
 header.header-appear nav.header-dark,
 header.sticky nav.navbar-fixed-top.header-dark,
 header.sticky nav.navbar-scroll-fixed-top.header-dark {
-  background-color: yellow;
+  background-color: grey;
 }
 
 /* collepsed menu icon */

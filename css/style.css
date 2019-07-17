@@ -74,7 +74,7 @@ html {
 a,
 a:active,
 a:focus {
-  color: #6f6f6f;
+  color: #c1bfbf;
   text-decoration: none;
 }
 
@@ -365,7 +365,12 @@ h6 {
 
 .text-medium-gray,
 .btn.text-medium-gray {
-  color: #939393
+  color: #fbf5f5
+}
+
+.text-medium-gray,
+.btn.text-medium-black {
+  color: black;
 }
 
 .text-extra-light-gray,
@@ -9540,7 +9545,7 @@ header .logo .logo-dark.default,
 header .logo .logo-light.default {
   visibility: visible;
   opacity: 1;
-  width: auto;
+  width: 20%;
   transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
@@ -9576,7 +9581,8 @@ header.sticky nav.header-light-transparent .logo .logo-dark,
 header.sticky nav.header-light .logo .logo-dark {
   visibility: visible;
   opacity: 1;
-  width: auto;
+  width: 40%;
+  height: auto;
   transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
@@ -10515,7 +10521,7 @@ header.sticky .header-dark .mobile-toggle:hover span {
 header.header-appear nav.header-light,
 header.sticky nav.navbar-fixed-top.header-light,
 header.sticky nav.navbar-scroll-fixed-top.header-light {
-  background-color: transparent;
+  background-color: #d6cece99;
   box-shadow: 0 9px 10px -10px rgba(0, 0, 0, 1)
 }
 
@@ -16990,7 +16996,7 @@ a img.aligncenter {
 }
 
 .footer-logo {
-  max-height: 28px;
+  /* max-height: 28px; */
 }
 
 /* footer input */
@@ -17389,11 +17395,12 @@ aside .latest-post li figure {
   left: -10px;
   top: 30px;
 }
-.linkToCon{
-  color: white;
 
+.linkToCon {
+  color: white;
 }
-.linkToCon: hover{
+
+.linkToCon:hover {
   color: #ff0000;
 }
 

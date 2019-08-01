@@ -31,7 +31,7 @@ fileUpload.addEventListener("change", event => {
     // let courseDescription = document.getElementById("courseDescription").value;
     // let imgPreview = document.getElementById("img-preview");
 
-    let content = document.getElementById("result").textContent;
+    let content = document.getElementById("result").innerHTML;
     let title = document.getElementById("title").value;
     let tag = document.getElementById("tag").value;
     // let content = contentOut.value;

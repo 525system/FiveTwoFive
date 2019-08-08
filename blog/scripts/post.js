@@ -33,7 +33,8 @@ fileUpload.addEventListener("change", event => {
 
     let content = document.getElementById("result").innerHTML;
     let title = document.getElementById("title").value;
-    let tag = document.getElementById("tag").value;
+    let tagRaw = document.getElementById("tag").value;
+    let tag = tagRaw.toLowerCase();
     // let content = contentOut.value;
     console.log("tag", tag);
     console.log("title", title);

@@ -1,33 +1,33 @@
-let name = document.getElementById ('title');
+let name = document.getElementById('title');
 // let header = document.getElementById("header");
-let image = document.getElementById ('image');
-let contents = document.getElementById ('content');
-let taggs = document.getElementById ('taggs');
+let image = document.getElementById('image');
+let contents = document.getElementById('content');
+let taggs = document.getElementById('taggs');
 let replyID;
 let commentID;
-let breadCrumb = document.querySelector ('#breadCrumb');
-let blogImage = document.querySelector ('#blogImage');
-let datePosted = document.querySelector ('#datePosted');
-let blogTitle = document.querySelector ('#blogTitle');
-let socialMedia = document.querySelector ('#social-media');
+let breadCrumb = document.querySelector('#breadCrumb');
+let blogImage = document.querySelector('#blogImage');
+let datePosted = document.querySelector('#datePosted');
+let blogTitle = document.querySelector('#blogTitle');
+let socialMedia = document.querySelector('#social-media');
 let url = window.location.href;
-console.log (url);
-let id = window.location.search.split ('?')[1];
+console.log(url);
+let id = window.location.search.split('?')[1];
 db
-  .collection ('posts')
-  .doc (id)
-  .get ()
-  .then (doc => {
+  .collection('posts')
+  .doc(id)
+  .get()
+  .then(doc => {
     // console.log (doc);
-    let preview = doc.data ().preview;
-    let title = doc.data ().title;
-    let date = new Date (doc.data ().date).toDateString ();
-    let content = doc.data ().content;
-    let taggs = doc.data ().tag;
-    let username = doc.data ().username;
+    let preview = doc.data().preview;
+    let title = doc.data().title;
+    let date = new Date(doc.data().date).toDateString();
+    let content = doc.data().content;
+    let taggs = doc.data().tag;
+    let username = doc.data().username;
     // console.log(tag);
 
-    let tags = sessionStorage.setItem ('tags', taggs);
+    let tags = sessionStorage.setItem('tags', taggs);
     blogImage.src = preview;
     datePosted.innerHTML = date;
     contents.innerHTML = content;
@@ -41,45 +41,45 @@ db
     //                     <li><a href="blog.525system.com" class="text-medium-gray">Blog</a></li>
     //                     <li class="text-medium-gray">${doc.data ().title}</li>
     //   `;
-    name.innerHTML = doc.data ().title;
-    breadCrumb.innerHTML = doc.data ().title;
-    blogTitle.innerHTML = doc.data ().title;
+    name.innerHTML = doc.data().title;
+    breadCrumb.innerHTML = doc.data().title;
+    blogTitle.innerHTML = doc.data().title;
   })
-  .catch (err => {
-    console.error (err);
+  .catch(err => {
+    console.error(err);
   });
 
 // **************************
 //   COMMENT SECTION POSTING
 // **************************
-let id2 = window.location.search.split ('?')[1];
-let commentsForm = document.querySelector ('#comments');
-commentsForm.addEventListener ('submit', e => {
-  e.preventDefault ();
-  const author = document.querySelector ('#author').value;
-  const email = document.querySelector ('#email').value;
-  const comment = document.querySelector ('#message').value;
+let id2 = window.location.search.split('?')[1];
+let commentsForm = document.querySelector('#comments');
+commentsForm.addEventListener('submit', e => {
+  e.preventDefault();
+  const author = document.querySelector('#author').value;
+  const email = document.querySelector('#email').value;
+  const comment = document.querySelector('#message').value;
   // const createdAt = new Date()
-  console.log (author);
-  console.log (email);
-  console.log (id);
-  console.log (comment);
+  console.log(author);
+  console.log(email);
+  console.log(id);
+  console.log(comment);
 
   db
-    .collection ('reviews')
-    .doc ()
-    .set ({
+    .collection('reviews')
+    .doc()
+    .set({
       id,
       author,
       email,
       comment,
-      created: firebase.firestore.Timestamp.fromDate (new Date ()),
+      created: firebase.firestore.Timestamp.fromDate(new Date()),
     })
-    .then (() => {
-      alert ('Your Reviews has been Added');
-      document.querySelector ('#author').value = '';
-      document.querySelector ('#email').value = '';
-      document.querySelector ('#message').value = '';
+    .then(() => {
+      alert('Your Reviews has been Added');
+      document.querySelector('#author').value = '';
+      document.querySelector('#email').value = '';
+      document.querySelector('#message').value = '';
       // commentsForm.reset();
     });
 });
@@ -88,8 +88,8 @@ commentsForm.addEventListener ('submit', e => {
 //   COMMENT SECTION PREVIEW
 // **************************
 
-const reviews = document.querySelector ('#comment-blog');
-const noOfComment = document.querySelector ('#noOfComment');
+const reviews = document.querySelector('#comment-blog');
+const noOfComment = document.querySelector('#noOfComment');
 // const reviewNo = document.querySelector("#reviewNo")
 const setupReviews = data => {
   if (data.length) {
@@ -101,13 +101,13 @@ const setupReviews = data => {
     }
     // commentID = data.id
     // reviewNo.innerHTML = `Reviews ( ${data.length} )`;
-    data.forEach (item => {
+    data.forEach(item => {
       commentID = item.id;
       // console.log(commentID)
-      const detail = item.data ();
-      const d = detail.created.toDate ().toDateString ();
+      const detail = item.data();
+      const d = detail.created.toDate().toDateString();
       // const date = new Date (d);
-      console.log (d);
+      console.log(d);
       const div = `<div class="single-comment clearfix" >
                     <div class="comment float-left">
                       <h6>${detail.author}</h6>
@@ -126,16 +126,16 @@ const setupReviews = data => {
 };
 
 db
-  .collection ('reviews')
-  .where ('id', '==', id)
-  .orderBy ('created', 'desc')
-  .onSnapshot (
+  .collection('reviews')
+  .where('id', '==', id)
+  .orderBy('created', 'desc')
+  .onSnapshot(
     snapshot => {
       //console.log(snapshot.docs.id);
       let data = snapshot.docs;
-      setupReviews (data);
+      setupReviews(data);
     },
     err => {
-      console.log (err.message);
+      console.log(err.message);
     }
   );

@@ -7,14 +7,14 @@ let username = "OGcodes";
 
 // let imgPreview = document.getElementById("img-preview").src;
 let fileUpload = document.getElementById("file-upload");
-// let content = document.getElementById("result").value;
+// let content = document.getElementById("editor1").value;
 
 
 let date;
 
 function savee() {
 
-  let content = document.getElementById("result").value;
+  // let content = document.getElementById("editor1").value;
   // console.log(content.value)
   let title = document.getElementById("title").value;
   let tag = document.getElementById("tag").value;
@@ -32,7 +32,7 @@ function savee() {
 
 //   let imgPreview = document.getElementById("img-preview");
 
-//   let content = document.getElementById("result").value;
+//   let content = document.getElementById("editor1").value;
 
 //   let title = document.getElementById("title").value;
 //   let tag = document.getElementById("tag").value;
@@ -44,12 +44,12 @@ function savee() {
 
 fileUpload.addEventListener("change", event => {
   event.preventDefault();
-  let range = document.getElementById('tags')
   // let courseDescription = document.getElementById("courseDescription").value;
   // let imgPreview = document.getElementById("img-preview");
 
-  let content = document.getElementById("result").value;
-
+  // let content = document.getElementById("editor1").value;
+  let content = CKEDITOR.instances.editor1.getData();
+  // console.log(content);
   let title = document.getElementById("title").value;
   let tags = document.getElementById("tag").value;
   console.log("tags", tags);
@@ -62,7 +62,7 @@ fileUpload.addEventListener("change", event => {
   // console.log(content.value);
   // console.log(content.innerText);
 
-  debugger;
+
 
   console.log(event);
   let file = event.target.files[0];

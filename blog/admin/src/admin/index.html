@@ -35,63 +35,8 @@
   <link rel="stylesheet" href="../../assets/styles.css" type="text/css">
   <link rel="stylesheet" href="../../snippets/build-classic-source/snippet.css" type="text/css">
   <link rel="stylesheet" href="../../assets/snippet-styles.css" type="text/css">
-  <script>
-    (function () {
-      'use strict';
-      // Set up global variables;
-      if (!window.umebrto) {
-        window.umberto = {};
-      }
-      window.umberto.relativeAppPath = "../../../../assets/1.1.1/scripts"
+  <script src="ckeditor/ckeditor.js"></script>
 
-      // Add app script
-      var el = document.createElement('script');
-      el.setAttribute('async', 'async');
-      el.setAttribute('defer', 'defer');
-      if (typeof Symbol === 'function' && typeof Symbol() === 'symbol') {
-        el.src = "https://ckeditor.com/docs/assets/1.1.1/scripts/app.js";
-      } else {
-        el.src = "https://ckeditor.com/docs/assets/1.1.1/scripts/app-polyfill.js";
-      }
-      document.getElementsByTagName('head')[0].appendChild(el);
-
-      // Changing documentation theme enable it via `localStorage.setItem( 'theme', 'theme-dark' )`
-      if (localStorage.getItem('theme') === 'theme-dark') {
-        document.getElementsByTagName('html')[0].classList.add('theme-dark');
-      }
-    })();
-  </script>
-  <!-- Google Tag Manager-->
-  <script>if (["ckeditor.com"].indexOf(location.hostname) !== -1) {
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-KFSS6L');
-    }
-
-  </script>
-  <!-- End Google Tag Manager-->
-  <script>if (["ckeditor.com"].indexOf(location.hostname) !== -1) {
-      window.emojicsOpts = {
-        widget: '50c7737f072dfd100f3dad0411f02e',
-        position: 'inline'
-      };
-      (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        js = d.createElement(s);
-        js.id = id;
-        js.async = 1;
-        js.src = 'http://connect.emojics.com/dist/sdk.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, 'script', 'emojics-js');
-    }
-  </script>
 </head>
 
 <body>
@@ -130,7 +75,7 @@
     <section class="main__content formatted">
       <div class="main__content-inner">
 
-        <form action="" method="POST">
+        <form id="formD">
           <label>
             Title :
             <input type="text" id="title" placeholder="title" />
@@ -141,32 +86,50 @@
             <input type="text" id="tag" placeholder="tech, security, government" />
           </label>
           <br /><br />
+          <label>
+            Convert Images :
+            <input class="btn btn-primary" type="file" for="cloud-upload" id="cloud-upload" style="color:red">
 
-
-          <div class="live-snippet">
-            <div id="snippet-image-upload">
-              <p id="result">Paste or drag and drop an image directly into the editor. You can also use
-                the "Insert
-                image" button
-                in the
-                toolbar.</p>
-            </div>
-          </div>
-          <!-- <button type="submit">POST</button> -->
+          </label>
           <br /><br />
+          <label>
+            Get Link :
+
+            <input type="text" id="img-link" width="50" />
+
+          </label>
+          <br /><br />
+          <textarea name="editor1" id="editor1" rows="10" cols="80">
+                      This is my textarea to be replaced with CKEditor.
+                  </textarea>
+          <button id="submit" style="border: 2px solid darkgrey;padding:20px;">Preview</button>
+
           <label class="file-upload-container btn btn-primary" style="border: 2px solid darkgrey;padding:20px;">
             <input class="btn btn-primary" type="file" for="file-upload" id="file-upload"
               style="display:none; color:red">
             POST
           </label>
-          <button id="submit" style="border: 2px solid darkgrey;padding:20px;">post</button>
-      </div>
-      </form>
+        </form>
+        <div id="output"></div>
+        <script>
+          // Replace the <textarea id="editor1"> with a CKEditor
+          // instance, using default configuration.
+          CKEDITOR.replace('editor1');
+
+          document.getElementById("submit").addEventListener("click", (event) => {
+            event.preventDefault();
+            var data = CKEDITOR.instances.editor1.getData();
+            console.log(data);
+            document.getElementById('output').innerHTML = data;
+            return false;
+          });
+
+        </script>
 
 
-      <div class="feedback-widget">
-        <!-- <div id="emojics-root"> -->
-      </div>
+        <div class="feedback-widget">
+          <!-- <div id="emojics-root"> -->
+        </div>
       </div>
     </section>
 
@@ -213,7 +176,7 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.3.0/cloudinary-core-shrinkwrap.js"></script>
 
   <script type="text/javascript" src="scripts/post.js"></script>
-
+  <script type="text/javascript" src="scripts/cloud.js"></script>
 </body>
 
 

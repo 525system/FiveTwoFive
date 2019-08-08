@@ -1,17 +1,19 @@
-const content = document.querySelector("#content");
+const content = document.querySelector('#content');
+
 const setupContent = data => {
-  let html = "";
-  data.forEach(data => {
+  let html = '';
+  data.forEach (data => {
     let id = data.id;
-    let preview = data.data().preview;
-    let title = data.data().title;
-    let date = data.data().date;
-    let content = data.data().content;
-    let tag = data.data().tag
-    let username = data.data().username;
-    console.log(data);
+    let preview = data.data ().preview;
+    let title = data.data ().title;
+    let date = new Date (data.data ().date).toDateString ();
+    let content = data.data ().content;
+    let tag = data.data ().tag;
+    let username = data.data ().username;
+    console.log (data);
 
     const div = `
+<<<<<<< HEAD
        <div
             class="col-12 col-lg-3 col-md-6 margin-50px-bottom wow fadeInUp last-paragraph-no-margin sm-margin-30px-bottom text-center text-md-left">
             <div class="blog-post blog-post-style1">
@@ -50,22 +52,35 @@ const setupContent = data => {
             </div>
         </div>
 
+=======
+       <div class="col-xs-6">
+								<div class="single-news">
+									<img src="${preview}" alt="">
+									<div class="post">
+										<span>${date} | 3 Comment</span>
+										<h4><a href="blog-details.html?${id}" class="tran3s">${title}</a></h4>
+										<p class="clip">${content}</p>
+									</div>
+								</div> 
+							</div> 
+>>>>>>> 900f2dce38002ae54aa5b8de1d039f0a225a78bd
     `;
     html += div;
   });
   content.innerHTML = html;
 };
 // let level = sessionStorage.getItem("userLevel");
-db.collection("posts")
-  .orderBy("date", "desc")
+db
+  .collection ('posts')
+  .orderBy ('date', 'desc')
   // .where("courseLevel", "<=", level)
-  .onSnapshot(
+  .onSnapshot (
     doc => {
       let data = doc.docs;
-      setupContent(data);
+      setupContent (data);
     },
     err => {
-      console.log(err);
+      console.log (err);
     }
   );
 // setInterval(setupContent, 2000)

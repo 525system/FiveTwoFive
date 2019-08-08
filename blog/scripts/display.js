@@ -23,8 +23,15 @@ const setupContent = data => {
                     </a>
                 </div>
                 <div class="post-details">
+                <a href="./blog-post.html?${id}"
+                        class="post-title text-medium text-extra-dark-gray d-block width-90 md-width-100 align">${
+      data.data().title
+      }</a>
+       <div
+                        class="separator-line-horrizontal-full bg-medium-light-gray margin-20px-tb md-margin-15px-tb">
+                    </div>
                     <span
-                        class="post-author text-extra-small text-medium-gray text-uppercase d-block margin-10px-bottom sm-margin-5px-bottom">
+                        class="post-author text-extra-small text-medium-gray text-uppercase d-block margin-10px-bottom sm-margin-5px-bottom align">
                         ${new Date(
         data.data().date).toDateString()} | by ${
       data.data().username
@@ -32,10 +39,7 @@ const setupContent = data => {
       data.data().tag
       }
                             </a></span>
-                    <a href="./blog-post.html?${id}"
-                        class="post-title text-medium text-extra-dark-gray d-block width-90 md-width-100">${
-      data.data().title
-      }</a>
+                    
                     <div
                         class="separator-line-horrizontal-full bg-medium-light-gray margin-20px-tb md-margin-15px-tb">
                     </div>

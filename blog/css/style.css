@@ -66,6 +66,10 @@ html {
   background: transparent;
 }
 
+.align {
+  text-align: center;
+}
+
 .clip {
   overflow: hidden;
   height: 70px;

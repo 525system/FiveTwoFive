@@ -14,12 +14,15 @@ const setupContent = data => {
 
     const div = `
        <div class="col-xs-6">
-								<div class="single-news clip">
-									<img src="${preview}" alt="image not found">
-									<div class="post">
-										<span>${date} | 3 Comment</span>
-										<h4><a href="blog-details.html?${id}" class="tran3s">${title}</a></h4>
-										<p class="clip">${content}...</p>
+                <div class="single-news ">
+                
+                <img src="${preview}" alt="image not found">
+                
+                <div class="post clip">
+                 
+                  <h4 style="margin: 0px;"><a href="blog-details.html?${id}" class="tran3s">${title}</a></h4>
+                   <span>${date}</span>
+                  <p class="">${content}...</p>
 									</div>
 								</div> 
 							</div> 
@@ -29,9 +32,10 @@ const setupContent = data => {
   content.innerHTML = html;
 };
 // let level = sessionStorage.getItem("userLevel");
-db
+let first = db
   .collection('posts')
   .orderBy('date', 'desc')
+  .limit(8)
   // .where("courseLevel", "<=", level)
   .onSnapshot(
     doc => {
@@ -44,3 +48,21 @@ db
   );
 // setInterval(setupContent, 2000)
 // setupContent();
+
+// var first = db.collection("posts")
+//   .orderBy('date', 'desc')
+//   .limit(8);
+
+// return first.get().then(function (documentSnapshots) {
+//   // Get the last visible document
+//   var lastVisible = documentSnapshots.docs[documentSnapshots.docs.length - 1];
+//   console.log("last", lastVisible);
+//   // });
+
+//   // Construct a new query starting at this document,
+//   // get the next 8 posts.
+//   var next = db.collection("posts")
+//     .orderBy('date', 'desc')
+//     .startAfter(lastVisible)
+//     .limit(8);
+// });

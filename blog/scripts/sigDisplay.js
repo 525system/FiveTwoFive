@@ -23,14 +23,21 @@ db
     let title = doc.data().title;
     let date = new Date(doc.data().date).toDateString();
     let content = doc.data().content;
-    let taggs = doc.data().tag;
+    // let tags = doc.data().tag;
     let username = doc.data().username;
-    // console.log(tag);
+    // console.log(doc.data().tag);
 
     let tags = sessionStorage.setItem('tags', taggs);
     blogImage.src = preview;
     datePosted.innerHTML = date;
     contents.innerHTML = content;
+    taggs.innerHTML = `
+    	<li class="float-left"><a style="color: white;
+                background: grey;
+                href="#" class="tran3s whiteT" >${
+      doc.data().tag
+      }</a></li>
+    `;
     socialMedia.innerHTML = `<li>Share</li>
 										
 										<li><a href="#" class="tran3s sharer" data-sharer="facebook" data-url="${url}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -76,7 +83,7 @@ commentsForm.addEventListener('submit', e => {
       created: firebase.firestore.Timestamp.fromDate(new Date()),
     })
     .then(() => {
-      alert('Your Reviews has been Added');
+      // alert('Your Reviews has been Added');
       document.querySelector('#author').value = '';
       document.querySelector('#email').value = '';
       document.querySelector('#message').value = '';
@@ -107,7 +114,7 @@ const setupReviews = data => {
       const detail = item.data();
       const d = detail.created.toDate().toDateString();
       // const date = new Date (d);
-      console.log(d);
+      // console.log(d);
       const div = `<div class="single-comment clearfix" >
                     <div class="comment float-left">
                       <h6>${detail.author}</h6>

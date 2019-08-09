@@ -9556,7 +9556,7 @@ header .logo .logo-dark.default,
 header .logo .logo-light.default {
   visibility: visible;
   opacity: 1;
-  width: 100%;
+  width: auto;
   transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
@@ -9580,7 +9580,7 @@ header.sticky nav.header-dark-transparent .logo .logo-dark,
 header.sticky nav.header-dark .logo .logo-dark {
   visibility: hidden;
   opacity: 0;
-  width: 100%;
+  width: auto;
   transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
@@ -9592,7 +9592,7 @@ header.sticky nav.header-light-transparent .logo .logo-dark,
 header.sticky nav.header-light .logo .logo-dark {
   visibility: visible;
   opacity: 1;
-  width: 100%;
+  width: auto;
   height: auto;
   transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s;

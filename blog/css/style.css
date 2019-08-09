@@ -176,7 +176,7 @@ a:hover {
   border-radius: 3px;
   text-align: center;
   color: #fff;
-  background: #00c4fc;
+  background: #ff0000;
   font-size: 20px;
   display: none;
 }
@@ -529,7 +529,7 @@ footer .follow-us form input:focus,
 .shop-details .single-product-details .info a:hover,
 .related-product-slider.owl-theme .owl-nav [class*=owl-]:hover,
 #business-main-banner-two .tp-caption a {
-  border-color: #00c4fc;
+  border-color: #ff0000;
 }
 
 /*----------------------------------- Theme Header --------------------*/
@@ -1625,7 +1625,7 @@ footer .follow-us form input:focus,
 
 .contact-style-two .opacity .wrapper .call-back {
   background: url(../images/home/shape2.png) no-repeat center center;
-  background-color: #00c4fc;
+  background-color: #ff0000;
   border-radius: 5px 0 0 0;
   padding: 125px 50px 160px 50px;
 }
@@ -2133,11 +2133,11 @@ footer .bottom-footer ul li h3 {
 }
 
 .pricing-plan .clearfix .single-price-table.active:hover strong {
-  color: #00c4fc;
+  color: #ff0000;
 }
 
 .pricing-plan .clearfix .single-price-table.active:hover a {
-  border-color: #00c4fc;
+  border-color: #ff0000;
   background: #ff0000 !important;
   color: #fff;
 }
@@ -2217,7 +2217,7 @@ footer .bottom-footer ul li h3 {
 
 .theme-inner-banner .bg .opacity {
   text-align: center;
-  padding: 75px 0 85px 0;
+  padding: 45px 0 8px 0;
 }
 
 .theme-inner-banner .bg .opacity h2 {
@@ -2335,8 +2335,8 @@ footer .bottom-footer ul li h3 {
   bottom: -1px;
   width: 100%;
   left: 0;
-  border-top: 1px solid #00c4fc;
-  border-bottom: 1px solid #00c4fc;
+  border-top: 1px solid #ff0000;
+  border-bottom: 1px solid #ff0000;
   -webkit-transform: scale(1, 0);
   transform: scale(1, 0);
   -webkit-transform-origin: 100% 50%;
@@ -2477,11 +2477,13 @@ footer .bottom-footer ul li h3 {
 .blog-sidebar .sidebar-recent-news img {
   width: 80px;
   border-radius: 3px;
+  height: 4em;
 }
 
 .blog-sidebar .sidebar-recent-news .post {
   width: calc(100% - 80px);
   padding-left: 20px;
+  margin-top: 20px;
 }
 
 .blog-sidebar .sidebar-recent-news .post h6 a {
@@ -2978,7 +2980,7 @@ footer .bottom-footer ul li h3 {
 }
 
 #success {
-  color: #00c4fc;
+  color: #ff0000;
 }
 
 #error {
@@ -3729,7 +3731,7 @@ footer .bottom-footer ul li h3 {
 }
 
 .shop-page .main-wrapper .shop-sidebar .price-ranger .ui-widget-header {
-  background: #00c4fc;
+  background: #ff0000;
 }
 
 .shop-page .main-wrapper .shop-sidebar .price-ranger .ui-slider-handle {
@@ -3976,7 +3978,7 @@ footer .bottom-footer ul li h3 {
 .shop-details .review-tab .nav-tabs>li.active>a:hover,
 .shop-details .review-tab .nav-tabs>li.active>a:focus {
   background: #fff;
-  border-top: 2px solid #00c4fc;
+  border-top: 2px solid #ff0000;
   border-radius: 0;
   font-weight: 500;
 }

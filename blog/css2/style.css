@@ -66,9 +66,14 @@ html {
   background: transparent;
 }
 
+#comm {
+  padding-left: 109px;
+  margin-top: -32px;
+}
+
 .clip {
   overflow: hidden;
-  height: 510px;
+  height: 350px;
 }
 
 #result {
@@ -100,10 +105,20 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.whiteT:hover,
+whiteT:active {
+  color: white;
+  background: #484848;
+}
+
+.whiteT {
+  /* color: white;background: #484848; */
+}
+
 a,
 a:active,
 a:focus {
-  color: #c1bfbf;
+  color: black;
   text-decoration: none;
 }
 
@@ -314,7 +329,7 @@ h3 {
 }
 
 h4 {
-  font-size: 40px;
+  font-size: 20px;
   line-height: 46px
 }
 

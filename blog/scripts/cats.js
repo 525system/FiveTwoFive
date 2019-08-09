@@ -10,14 +10,17 @@ const setupContentCats = data => {
     // let cats = data.data().cats;
     let tag = data.data().tag;
     let username = data.data().username;
-    console.log(data);
+    // console.log(data);
 
     const div = `
-       <li><a href="#" class="tran3s">${
+     
+							<li class="float-left"><a style="color: white;
+                background: #484848; 
+                href="#" class="tran3s whiteT" >${
       data.data().tag
-      }<span>${
-      data.data().tag.length
-      }</span></a></li>
+      }</a></li>
+							
+					
     `;
     html += div;
   });

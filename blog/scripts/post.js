@@ -2,7 +2,7 @@ const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/ogcodes/upload";
 const CLOUDINARY_UPLOAD_PRESET = "i4hpnx9j";
 const CLOUD_NAME = "ogcodes";
 
-// let username = sessionStorage.getItem("username");
+let username = sessionStorage.getItem("username");
 
 // let imgPreview = document.getElementById("img-preview").src;
 let fileUpload = document.getElementById("file-upload");
@@ -70,12 +70,12 @@ fileUpload.addEventListener("change", event => {
             // console.log(title);
             // console.log(courseDescription);
             console.log("cloudinary works")
-            console.log("preview", preview)
-            console.log("title", title)
-            console.log("date", date)
-            console.log("content", content)
-            console.log("tag", tag)
-            console.log("username", username)
+            // console.log("preview", preview)
+            // console.log("title", title)
+            // console.log("date", date)
+            // console.log("content", content)
+            // console.log("tag", tag)
+            // console.log("username", username)
             return db
                 .collection("posts")
                 .doc()
@@ -89,10 +89,12 @@ fileUpload.addEventListener("change", event => {
                 })
                 .catch(err => {
                     console.error(err);
+                    alert(error, "did not upload to database");
                 });
         })
         .catch(err => {
             console.log(err);
+            alert(error, "did not upload to database");
         });
 });
     // console.log(title);

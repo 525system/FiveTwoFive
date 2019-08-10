@@ -2,8 +2,8 @@ const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/ogcodes/upload";
 const CLOUDINARY_UPLOAD_PRESET = "i4hpnx9j";
 const CLOUD_NAME = "ogcodes";
 
-// let username = sessionStorage.getItem("username");
-let username = "OGcodes";
+let usernameAuthor = sessionStorage.getItem("username");
+// let username = "OGcodes";
 
 // let imgPreview = document.getElementById("img-preview").src;
 let fileUpload = document.getElementById("file-upload");
@@ -12,20 +12,6 @@ let fileUpload = document.getElementById("file-upload");
 
 let date;
 
-function savee() {
-
-  // let content = document.getElementById("editor1").value;
-  // console.log(content.value)
-  let title = document.getElementById("title").value;
-  let tag = document.getElementById("tag").value;
-  // let content = contentOut.value;
-  console.log("tag", tag);
-  console.log("title", title);
-  console.log("cont", content);
-  // console.log(content.innerHTML);
-  // console.log(content.value);
-  // console.log(content.innerText);
-}
 
 // console.log(username);
 // fileUpload.addEventListener("submit", event => {
@@ -52,12 +38,12 @@ fileUpload.addEventListener("change", event => {
   // console.log(content);
   let title = document.getElementById("title").value;
   let tags = document.getElementById("tag").value;
-  console.log("tags", tags);
+  // console.log("tags", tags);
   let tag = tags.split(",");
   // let content = contentOut.value;
-  console.log("tag", tag);
-  console.log("title", title);
-  console.log("cont", content);
+  // console.log("tag", tag);
+  // console.log("title", title);
+  // console.log("cont", content);
   // console.log(content.innerHTML);
   // console.log(content.value);
   // console.log(content.innerText);
@@ -89,12 +75,12 @@ fileUpload.addEventListener("change", event => {
       // console.log(title);
       // console.log(courseDescription);
       console.log("cloudinary works")
-      console.log("preview", preview)
-      console.log("title", title)
-      console.log("date", date)
-      console.log("content", content)
-      console.log("tag", tag)
-      console.log("username", username)
+      // console.log("preview", preview)
+      // console.log("title", title)
+      // console.log("date", date)
+      // console.log("content", content)
+      // console.log("tag", tag)
+      // console.log("username", username)
       return db
         .collection("posts")
         .doc()
@@ -104,14 +90,16 @@ fileUpload.addEventListener("change", event => {
           date,
           content,
           tag,
-          username
+          username: usernameAuthor
         }).then(alert("BLOG POST SUCCESSFUL"))
         .catch(err => {
           console.error(err);
+          alert(err, "BLOG POST UNSUCCESSFUL");
         });
     })
     .catch(err => {
       console.log(err);
+      alert(err, "BLOG POST UNSUCCESSFUL");
     });
 });
     // console.log(title);

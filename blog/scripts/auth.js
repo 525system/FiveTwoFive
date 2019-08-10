@@ -34,8 +34,9 @@ console.log(username)
 // console.log(user.email);
 // console.log(session);
 if (!currentUser) {
-  location.href = "login.html";
+  location.href = "../../../login.html";
   console.log("not logged in from auth");
+
 } else {
   let currentUserSession = sessionStorage.getItem("user");
 

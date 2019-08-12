@@ -4432,6 +4432,12 @@
 }
 
 @media (max-width: 991px) {
+  .miss {
+    display: none;
+  }
+  .align {
+    padding-right: 40px;
+  }
   /* typography */
   h1,
   h2,
@@ -4660,8 +4666,9 @@
     padding: 10px 0
   }
   nav.navbar.bootsnav ul.nav li.dropdown.simple-dropdown ul.dropdown-menu>li>a {
-    padding: 7px 0;
-    left: 0
+    /* padding: 7px 0;
+    left: 0 */
+    text-align: center;
   }
   .dropdown.simple-dropdown.show .dropdown-menu .dropdown .dropdown-menu {
     display: block !important;

@@ -51,10 +51,11 @@ signupForm.addEventListener("submit", e => {
       console.log(username);
 
       let usernameSession = sessionStorage.setItem("username", username);
-      location.href = "admin.html";
+      location.href = "./admin/src/admin/index.html";
     })
     .catch(err => {
       console.log(err);
+      alert(err);
     });
 });
 

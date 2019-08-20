@@ -3,6 +3,8 @@ const CLOUDINARY_UPLOAD_PRESET = "i4hpnx9j";
 const CLOUD_NAME = "ogcodes";
 
 let usernameAuthor = sessionStorage.getItem("username");
+let emailAuth = sessionStorage.getItem("email");
+// console.log(emailAuth)
 // let username = "OGcodes";
 
 // let imgPreview = document.getElementById("img-preview").src;
@@ -38,8 +40,9 @@ fileUpload.addEventListener("change", event => {
   // console.log(content);
   let title = document.getElementById("title").value;
   let tags = document.getElementById("tag").value;
-  // console.log("tags", tags);
+  console.log("tags", tags);
   let tag = tags.split(",");
+  console.log("tag array", tag)
   // let content = contentOut.value;
   // console.log("tag", tag);
   // console.log("title", title);
@@ -52,7 +55,7 @@ fileUpload.addEventListener("change", event => {
 
   console.log(event);
   let file = event.target.files[0];
-
+  // debugger;
   let formData = new FormData();
   formData.append("file", file);
   formData.append("upload_preset", CLOUDINARY_UPLOAD_PRESET);
@@ -90,7 +93,8 @@ fileUpload.addEventListener("change", event => {
           date,
           content,
           tag,
-          username: usernameAuthor
+          username: usernameAuthor,
+          emailAuth
         }).then(alert("BLOG POST SUCCESSFUL"))
         .catch(err => {
           console.error(err);

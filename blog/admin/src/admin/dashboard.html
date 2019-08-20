@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>525 Blog Editor</title>
+    <link rel="icon" type="image/png" sizes="56x56" href="../../../images/logo/logo.png">
     <!-- <meta name="description"
     content="Learn how to install, integrate and configure CKEditor 5 Builds and how to work with CKEditor 5 Framework, customize it, create your own plugins and custom editors, change the UI or even bring your own UI to the editor. API reference and examples included.">
   <meta name="twitter:card"
@@ -35,6 +36,9 @@
     <link rel="stylesheet" href="../../assets/styles.css" type="text/css">
     <link rel="stylesheet" href="../../snippets/build-classic-source/snippet.css" type="text/css">
     <link rel="stylesheet" href="../../assets/snippet-styles.css" type="text/css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script>
         (function () {
             'use strict';
@@ -104,21 +108,19 @@
     <header class="top" data-project="ckeditor5">
         <div class="header__main">
             <div class="header__main-rwd-button"><a href="#"><span></span><span></span><span></span></a></div>
-            <div class="header__main-title"><a class="header__main-title-home" href="#">525 Blog Editor</a></div>
+            <div class="header__main-title"><a class="header__main-title-home" href="#">525 Blog Post Album</a></div>
 
         </div>
         <div class="header__sub">
             <ul class="top__menu">
-                <li><a class="top__menu__item" href="#">Blog Editor</a></li>
+                <li><a class="top__menu__item" href="index.html">Blog Editor</a></li>
                 <li><a class="top__menu__item--active" href="#">Dashboard</a></li>
-                <li class="top__menu__item"><a href="#">Home</a></li>
-                <li><a href="#">Solutions</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a class="top__menu__item" href="#">Contact us</a></li>
-                <li><a class="top__menu__api" href="#">Blog</a></li>
+                <li class="top__menu__item"><a href="https://525system.com">Home</a></li>
+
+                <li><a class="top__menu__api" href="https://blog.525system.com">Blog</a></li>
 
             </ul>
+
         </div>
         <div class="header__menu-rwd">
             <ul class="header__menu-rwd__projects">
@@ -129,16 +131,27 @@
     <main class="main">
         <section class="main__content formatted">
             <div class="main__content-inner">
+                <p id="authName"> </p>
 
                 <div class="feedback-widget">
 
+
+                    <div class="album py-5 bg-light">
+                        <div class="container">
+
+                            <div class="row" id="content">
+
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
     </main>
     <footer class="footer footer--bordered">
-        <p>&copy; 2004-2019 <a href="http://525system.com/">525 System</a>. All rights reserved.</p>
+        <p>&copy; 2019 <a href="http://525system.com/">525 System</a>. All rights reserved.</p>
     </footer>
 
     <script src="../../assets/snippet.js"></script>
@@ -177,8 +190,21 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.3.0/cloudinary-core-shrinkwrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="scripts/post.js"></script>
+    <script type="text/javascript" src="scripts/dashboard.js"></script>
+    <script type="text/javascript" src="scripts/name.js"></script>
+    <script type="text/javascript" src="scripts/del.js"></script>
+    <script type="text/javascript" src="scripts/edit.js"></script>
+    <script type="text/javascript" src="../../../scripts/auth.js"></script>
 
 </body>
 

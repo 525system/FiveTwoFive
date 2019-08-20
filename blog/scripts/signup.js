@@ -49,7 +49,9 @@ signupForm.addEventListener("submit", e => {
 
       let username = Username.value;
       console.log(username);
-
+      const mail = document.querySelector("#signup-email");
+      let emailID = mail.value;
+      let emailSession = sessionStorage.setItem("email", emailID);
       let usernameSession = sessionStorage.setItem("username", username);
       location.href = "./admin/src/admin/index.html";
     })

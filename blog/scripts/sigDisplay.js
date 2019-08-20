@@ -38,7 +38,7 @@ db
       doc.data().tag
       }</a></li>
     `;
-    socialMedia.innerHTML = `<li>Share</li>
+    socialMedia.innerHTML = `
 										
 										<li><a href="#" class="tran3s sharer" data-sharer="facebook" data-url="${url}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 										<li><a href="#" class="tran3s sharer" data-sharer="twitter" data-url="${url}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>

@@ -10,16 +10,18 @@ const setupContentCats = data => {
     // let cats = data.data().cats;
     let tag = data.data().tag;
     let username = data.data().username;
-    // console.log(data);
+    // console.log(tag);
+
 
     const div = `
-     
-							<li class="float-left"><a style="color: white;
-                background: #484848; 
-                href="#" class="tran3s whiteT" >${
-      data.data().tag
+      <ul class="clearfix" >
+           
+            <li class="float-left"><a style="color: white;
+              background: #484848;" 
+              href="#"  >${
+      tag
       }</a></li>
-							
+					</ul>
 					
     `;
     html += div;

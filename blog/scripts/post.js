@@ -3,6 +3,8 @@ const CLOUDINARY_UPLOAD_PRESET = "i4hpnx9j";
 const CLOUD_NAME = "ogcodes";
 
 let username = sessionStorage.getItem("username");
+let email = sessionStorage.getItem("email");
+console.log(email)
 
 // let imgPreview = document.getElementById("img-preview").src;
 let fileUpload = document.getElementById("file-upload");
@@ -85,7 +87,8 @@ fileUpload.addEventListener("change", event => {
                     date,
                     content,
                     tag,
-                    username
+                    username,
+                    email
                 })
                 .catch(err => {
                     console.error(err);
@@ -94,7 +97,7 @@ fileUpload.addEventListener("change", event => {
         })
         .catch(err => {
             console.log(err);
-            alert(error, "did not upload to database");
+            alert(error, "did not upload");
         });
 });
     // console.log(title);

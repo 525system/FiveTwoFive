@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>525 Blog Editor</title>
+  <link rel="icon" type="image/png" sizes="56x56" href="../../../images/logo/logo.png">
+  <!-- <meta name="description"
+    content="Learn how to install, integrate and configure CKEditor 5 Builds and how to work with CKEditor 5 Framework, customize it, create your own plugins and custom editors, change the UI or even bring your own UI to the editor. API reference and examples included.">
+  <meta name="twitter:card"
+    content="Learn how to install, integrate and configure CKEditor 5 Builds and how to work with CKEditor 5 Framework, customize it, create your own plugins and custom editors, change the UI or even bring your own UI to the editor. API reference and examples included.">
+  <meta name="twitter:site" content="@ckeditor">
+  <meta property="og:title" content="Image upload overview - CKEditor 5 Documentation">
+  <meta property="og:description"
+    content="Learn how to install, integrate and configure CKEditor 5 Builds and how to work with CKEditor 5 Framework, customize it, create your own plugins and custom editors, change the UI or even bring your own UI to the editor. API reference and examples included.">
+  <meta property="og:image" content="https://ckeditor.com/docs/assets/img/og/ogimage-ecosystem.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="image-upload.html">
+  <meta property="DC.language" content="en">
+  <meta property="DC.publisher" content="CKSource">
+  <meta property="DC.creator" content="CKEditor">
+  <meta property="DC.title" content="Image upload overview - CKEditor 5 Documentation">
+  <meta property="DC.format" content="text/html">
+  <meta property="DC.type" content="Text">
+  <meta property="DC.description"
+    content="Learn how to install, integrate and configure CKEditor 5 Builds and how to work with CKEditor 5 Framework, customize it, create your own plugins and custom editors, change the UI or even bring your own UI to the editor. API reference and examples included.">
+  <link rel="canonical" href="image-upload.html"> -->
+  <!-- <link rel="icon" type="image/png" href="../../assets/img/favicons/16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="../../assets/img/favicons/32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../assets/img/favicons/96x96.png" sizes="96x96">
+  <link rel="apple-touch-icon" type="image/png" href="../../assets/img/favicons/200x200.png"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <link rel="stylesheet" href="https://ckeditor.com/docs/assets/1.1.1/css/styles.css" type="text/css" media="all">
+  <link rel="stylesheet" href="../../assets/styles.css" type="text/css">
+  <link rel="stylesheet" href="../../snippets/build-classic-source/snippet.css" type="text/css">
+  <link rel="stylesheet" href="../../assets/snippet-styles.css" type="text/css">
+  <script src="ckeditor/ckeditor.js"></script>
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript)-->
+  <noscript>
+
+  </noscript>
+  <!-- End Google Tag Manager (noscript)-->
+  <header class="top" data-project="ckeditor5">
+    <div class="header__main">
+      <div class="header__main-rwd-button"><a href="#"><span></span><span></span><span></span></a></div>
+      <div class="header__main-title"><a class="header__main-title-home" href="#">525 Blog Editor</a></div>
+
+    </div>
+    <div class="header__sub">
+      <ul class="top__menu">
+        <li><a class="top__menu__item--active" href="#">Blog Editor</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li class="top__menu__item"><a href="https://525system.com">Home</a></li>
+
+        <li><a class="top__menu__api" href="https://blog.525system.com">Blog</a></li>
+
+      </ul>
+    </div>
+    <div class="header__menu-rwd">
+      <ul class="header__menu-rwd__projects">
+
+      </ul>
+    </div>
+  </header>
+  <main class="main">
+    <section class="main__content formatted">
+      <div class="main__content-inner">
+
+        <form id="formD">
+          <label>
+            Title :
+            <input type="text" id="title" placeholder="title" />
+          </label>
+          <br /><br /><br />
+          <label>
+            Tags :
+            <input type="text" id="tag" placeholder="tech security government" />
+          </label>
+          <br /><br />
+          <label>
+            Convert Images :
+            <input class="btn btn-primary" type="file" for="cloud-upload" id="cloud-upload" style="color:red">
+
+          </label>
+          <br /><br />
+          <label>
+            Get Link :
+
+            <input type="text" id="img-link" width="50" />
+
+          </label>
+          <br /><br />
+          <textarea name="editor1" id="editor1" rows="10" cols="80">
+                     copy and paste the content from below
+                  </textarea>
+          <button id="submit" style="border: 2px solid darkgrey;padding:20px;">Preview</button>
+
+          <label class="file-upload-container btn btn-primary" style="border: 2px solid darkgrey;padding:20px;">
+            <input class="btn btn-primary" type="file" for="file-upload" id="file-upload"
+              style="display:none; color:red">
+            POST
+          </label>
+        </form>
+        <div id="output"></div>
+        <script>
+          // Replace the <textarea id="editor1"> with a CKEditor
+          // instance, using default configuration.
+          CKEDITOR.replace('editor1');
+
+          document.getElementById("submit").addEventListener("click", (event) => {
+            event.preventDefault();
+            var data = CKEDITOR.instances.editor1.getData();
+            // console.log("data", data);
+            data = editContent;
+            document.getElementById('output').innerHTML = data;
+            return false;
+          });
+
+        </script>
+
+
+        <div class="feedback-widget">
+          <!-- <div id="emojics-root"> -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer footer--bordered">
+    <p>&copy; 2019<a href="https://525system.com/">525 System</a>. All rights reserved.</p>
+  </footer>
+
+  <script src="../../assets/snippet.js"></script>
+  <script src="../../snippets/build-classic-source/snippet.js"></script>
+  <script src="../../snippets/features/easy-image/snippet.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-functions.js"></script>
+
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#config-web-app -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBLImzjqMfbBvqfuxgkeBt2bEIT6KWH8sI",
+      authDomain: "blog-35fb1.firebaseapp.com",
+      databaseURL: "https://blog-35fb1.firebaseio.com",
+      projectId: "blog-35fb1",
+      storageBucket: "",
+      messagingSenderId: "240336399552",
+      appId: "1:240336399552:web:93fc7eaebc3346cf"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    // make auth and firestore refrences
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    const functions = firebase.functions();
+    // const rootRef = firebase.functions().CollectionReference();
+    // console.log(firebase)
+
+  </script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.3.0/cloudinary-core-shrinkwrap.js"></script>
+
+  <!-- <script type="text/javascript" src="scripts/post.js"></script> -->
+  <script type="text/javascript" src="scripts/cloud.js"></script>
+  <script type="text/javascript" src="scripts/edit.js"></script>
+  <script type="text/javascript" src="../../../scripts/auth.js"></script>
+</body>
+
+
+</html>

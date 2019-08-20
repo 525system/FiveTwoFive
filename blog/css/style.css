@@ -85,7 +85,7 @@
 * Importing necessary  Styles.
 **/
 
-@import url('https://fonts.googleapis.com/css?family=Lato:400,300,700|Montserrat:200,300,400,500,600,700,800,900');
+/* @import url('https://fonts.googleapis.com/css?family=Lato:400,300,700|Montserrat:200,300,400,500,600,700,800,900'); */
 /*----bootstrap css ----- */
 
 @import url('../vendor/bootstrap/bootstrap.css');

@@ -36,9 +36,11 @@ loginForm.addEventListener("submit", e => {
         firebase.auth().currentUser
       );
       const Username = document.querySelector("#login-username");
-
+      const mail = document.querySelector("#login-email");
+      let emailID = mail.value;
+      let emailSession = sessionStorage.setItem("email", emailID);
       let username = Username.value;
-      console.log(username);
+      console.log(emailID);
       let usernameSession = sessionStorage.setItem("username", username);
       // console.log(cred.user);
       location.href = "./admin/src/admin/index.html";

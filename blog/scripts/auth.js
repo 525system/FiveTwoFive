@@ -19,14 +19,14 @@
 //     console.log(result);
 //   });
 // });
-
 let currentUser = sessionStorage.getItem("user");
 // console.log(currentUser);
 
 // console.log(currentUser, "currentuser");
 // let currentAdmin = currentUser.admin;
 let username = sessionStorage.getItem("username");
-console.log(username)
+let email = sessionStorage.getItem("email");
+// console.log(email);
 
 // console.log("outside", cookie);
 // LISTEN for auth status changes
@@ -38,9 +38,9 @@ if (!currentUser) {
   console.log("not logged in from auth");
 
 } else {
-  let currentUserSession = sessionStorage.getItem("user");
+  // let currentUserSession = sessionStorage.getItem("user");
 
-  console.log(currentUserSession);
+  // console.log(currentUserSession);
   console.log("user logged in from auth");
 }
 

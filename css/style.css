@@ -60,9 +60,9 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  font-size: 15px;
+  font-size: 14px;
   color: #6f6f6f;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 24px;
 }
 
@@ -83,7 +83,7 @@ html {
 a,
 a:active,
 a:focus {
-  color: #c1bfbf;
+  color: #ff0000;
   text-decoration: none;
 }
 
@@ -262,6 +262,11 @@ dl {
 
 .main-font {
   font-family: 'Roboto', sans-serif;
+}
+
+.footer-li {
+  font-size: 12px;
+  line-height: 20px;
 }
 
 /* heading */
@@ -6435,8 +6440,8 @@ textarea.input-bg {
 }
 
 .padding-50px-tb {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  /* padding-top: 50px; */
+  padding-bottom: 30px;
 }
 
 .padding-55px-tb {
@@ -8726,7 +8731,8 @@ a.likes-count span {
 .social-icon-style-8 ul li a {
   text-align: center;
   width: auto;
-  height: auto
+  height: auto;
+  color: black;
 }
 
 .social-icon-style-8 a:hover {
@@ -10534,41 +10540,13 @@ header.sticky .header-dark .mobile-toggle:hover span {
   background: "images/gif/source(.gif";
 }
 
-.linkers {
-  background: #e0e0e0;
-  height: 55px;
-  width: 80%;
-  font-size: 14px;
-  font-weight: 700;
-  border-radius: 10px 10px 10px 10px;
-  /* box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 1); */
-  box-shadow: 1.14519px 5.29039px 4.0081px rgba(152, 152, 152, 0.44);
-}
-
-.logo {
-  background: #e0e0e0;
-  /* padding: 12px; */
-  padding: 10px 10px;
-  border-radius: 26px 0px 26px 1px;
-  /* box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 1); */
-  margin-top: 6px;
-}
-
-.social {
-  background: #e0e0e0;
-  padding-bottom: 26px;
-  padding-top: 26px;
-  padding-right: 10px;
-  border-radius: 26px 0px 26px 1px;
-}
-
 /* light navigation */
 
 header.header-appear nav.header-light,
 header.sticky nav.navbar-fixed-top.header-light,
 header.sticky nav.navbar-scroll-fixed-top.header-light {
-  /* background-color: #d6cece99;
-  box-shadow: 0 9px 10px -10px rgba(0, 0, 0, 1) */
+  background-color: #d6cece99;
+  box-shadow: 0 9px 10px -10px rgba(0, 0, 0, 1)
 }
 
 /* dark navigation */

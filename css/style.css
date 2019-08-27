@@ -269,6 +269,10 @@ dl {
   line-height: 20px;
 }
 
+.greyColor {
+  color: #6f6f6f;
+}
+
 /* heading */
 
 h1,

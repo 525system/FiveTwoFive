@@ -9639,7 +9639,7 @@ header a.logo {
 }
 
 header a.logo img {
-  max-height: 26px;
+  max-height: 50px;
 }
 
 header .left-nav .sidebar-part1 a.logo img {
@@ -11169,6 +11169,7 @@ nav.navbar.navbar-default ul.nav>li>a {
   border-color: transparent;
   font-weight: 600;
   display: block;
+  font-size: 15px;
 }
 
 nav.navbar.navbar-default ul.nav>li.dropdown>a.dropdown-toggle::after,

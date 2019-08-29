@@ -10139,7 +10139,7 @@ nav.navbar.bootsnav li.dropdown .mega-menu-full>ul li.dropdown-header {
 nav.navbar.bootsnav li.dropdown .mega-menu-full>ul li a {
   text-align: left;
   font-size: 12px;
-  color: #9d9d9d;
+  color: black;
   padding: 3px 40px;
   text-transform: capitalize;
   margin: 0;
@@ -10350,7 +10350,7 @@ nav.navbar.bootsnav .simple-dropdown .dropdown-menu>li {
 
 .simple-dropdown .dropdown-menu>li>a {
   font-size: 12px;
-  color: #9d9d9d;
+  color: black;
 }
 
 .simple-dropdown .dropdown-menu>li a {
@@ -10406,7 +10406,7 @@ nav.navbar.bootsnav .simple-dropdown .dropdown-menu>li.dropdown>ul>li.dropdown>u
 }
 
 .simple-dropdown .dropdown-menu>li.dropdown>ul li a {
-  color: #9d9d9d;
+  color: black;
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;

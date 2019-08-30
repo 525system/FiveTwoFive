@@ -4432,6 +4432,9 @@
 }
 
 @media (max-width: 991px) {
+  .socialsFooter {
+    padding-left: 50px;
+  }
   .miss {
     display: none;
   }
@@ -14314,6 +14317,9 @@
     /* special character */
     .special-char-medium {
       font-size: 60px;
+    }
+    .socialsFooter {
+      padding-left: 0px;
     }
     /* feature box 7 */
     .feature-box {

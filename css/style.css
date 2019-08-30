@@ -55,7 +55,9 @@ html {
 #result {
   margin: 10px;
 }
-
+.socialsFooter{
+  padding-left: 90px;
+}
 body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -7084,6 +7084,9 @@ button.bg-dark:hover {
     display: -ms-inline-flexbox !important;
     display: inline-flex !important
   }
+  .socialsFooter {
+    padding-left: 0px;
+  }
 }
 
 @media (min-width:768px) {
@@ -7115,6 +7118,9 @@ button.bg-dark:hover {
   .d-md-inline-flex {
     display: -ms-inline-flexbox !important;
     display: inline-flex !important
+  }
+  .socialsFooter {
+    padding-left: 0px;
   }
 }
 
@@ -7148,6 +7154,9 @@ button.bg-dark:hover {
     display: -ms-inline-flexbox !important;
     display: inline-flex !important
   }
+  .socialsFooter {
+    padding-left: 0px;
+  }
 }
 
 @media (min-width:1200px) {
@@ -7179,6 +7188,9 @@ button.bg-dark:hover {
   .d-xl-inline-flex {
     display: -ms-inline-flexbox !important;
     display: inline-flex !important
+  }
+  .socialsFooter {
+    padding-left: 90px;
   }
 }
 

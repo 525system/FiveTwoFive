@@ -11168,7 +11168,7 @@ header nav.nav-box-width {
 /* dropdown menu */
 
 nav.navbar.navbar-default ul.nav>li>a {
-  padding: 26px 0;
+  padding: 5px;
   background: transparent;
   border-color: transparent;
   font-weight: 600;

@@ -562,7 +562,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked {
     -o-border-radius: 0px;
     border-radius: 0px;
     border: none;
-    box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 1);
+    box-shadow: 1px 9px 34px -3px rgba(0, 0, 0, 1)
   }
   nav.navbar.bootsnav li.dropdown ul.dropdown-menu>li a:hover,
   nav.navbar.bootsnav li.dropdown ul.dropdown-menu>li:last-child>a {

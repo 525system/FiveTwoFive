@@ -278,7 +278,16 @@ dl {
 }
 
 .slide-bottom {
-  animation: slide-bottom 1s cubic-bezier(.25, .46, .45, .94) reverse both
+  animation: slide-bottom 1s ease-in reverse both
+}
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(0)
+  }
+  100% {
+    transform: translateY(100px)
+  }
 }
 
 .slide-top {

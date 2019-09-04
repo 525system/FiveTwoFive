@@ -277,6 +277,27 @@ dl {
   color: #6f6f6f;
 }
 
+.slide-bottom {
+  animation: slide-bottom 1s cubic-bezier(.25, .46, .45, .94) reverse both
+}
+
+.slide-top {
+  animation: slide-top 1s cubic-bezier(.25, .46, .45, .94) reverse both
+}
+
+.slide-right {
+  animation: slide-right 1s cubic-bezier(.445, .05, .55, .95) reverse both
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(0)
+  }
+  100% {
+    transform: translateX(100px)
+  }
+}
+
 /* heading */
 
 h1,
@@ -9637,9 +9658,51 @@ header.sticky nav.navbar-top-scroll {
   background-color: inherit;
 }
 
+.scale-down-top {
+  animation: scale-down-top .9s ease-in reverse both
+}
+
+@keyframes scale-down-top {
+  0% {
+    transform: translateY(0)
+  }
+  100% {
+    transform: translateY(-100px)
+  }
+}
+
+.slide-left {
+  animation: slide-left .6s ease-in reverse both
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0)
+  }
+  100% {
+    transform: translateX(-100px)
+  }
+}
+
+.clip {
+  height: 35px;
+  /* width: 20%; */
+  position: absolute;
+  top: 4.5px;
+  left: 400px;
+  transform: skewX(-40deg);
+  transform-origin: 100% 0px;
+  width: 49.955px;
+  border-radius: 5px 0 0 15px;
+  /* box-shadow: rgba(0, 0, 0, 0.3) 0.55909px 0.52727px 4.3182px; */
+  background: rgb(252, 171, 16);
+}
+
 header a.logo {
   display: inline-block;
   vertical-align: middle;
+  padding-left: 5px;
+  margin-top: 5px;
 }
 
 header a.logo img {
@@ -9769,6 +9832,12 @@ nav.navbar.bootsnav ul.nav>li>a:hover,
 .header-social-icon a:hover {
   color: #ff0000;
 }
+
+/* header.header-appear nav.bootsnav.header-light-transparent .navbar-nav>,
+header.header-appear nav.bootsnav.header-light .navbar-nav> {
+  height: 40px;
+  padding: 0px;
+} */
 
 header nav.navbar.white-link .navbar-nav>li>a:hover,
 nav.navbar.bootsnav.white-link ul.nav>li>a:hover,

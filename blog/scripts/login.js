@@ -43,7 +43,7 @@ loginForm.addEventListener("submit", e => {
       console.log(emailID);
       let usernameSession = sessionStorage.setItem("username", username);
       // console.log(cred.user);
-      location.href = "./admin/src/admin/index.html";
+      location.href = "./blog/admin/src/admin/index.html";
     })
     .catch(err => {
       console.log(err);
